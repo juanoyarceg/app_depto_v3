@@ -177,7 +177,7 @@ def predict():
 
     output = int(prediction[0])
 
-    return render_template('index.html', prediction_text='Monto :  $ {}'.format(output).replace(",", "@").replace(".", ",").replace("@", "."))
+    return render_template('index.html', prediction_text='Monto :$ {:,.0f}'.format(output).replace(",", "@").replace(".", ",").replace("@", ".") )
 
 if __name__ == "__main__":
     app.run(debug=True)
